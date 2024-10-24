@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="759.0" prefWidth="872.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="contraller.suplier.SuplierFormContraller">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#163b5e" height="85.0" stroke="BLACK" strokeType="INSIDE" width="886.0" />
+      <Label layoutX="403.0" layoutY="27.0" text="Suplier" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold Italic" size="31.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="674.0" fitWidth="886.0" layoutY="85.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../java/img/hand.jpg" />
+         </image>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <TableView id="tblSuplier" fx:id="tblSuplier" editable="true" layoutX="67.0" layoutY="116.0" opacity="0.64" prefHeight="361.0" prefWidth="772.0" style="-fx-background-color: gray;">
+        <columns>
+          <TableColumn fx:id="colSupID" prefWidth="115.0" text="Sup_ID" />
+          <TableColumn fx:id="colName" prefWidth="133.0" text="Name" />
+            <TableColumn fx:id="colEmail" prefWidth="190.0" text="Email" />
+            <TableColumn fx:id="colCompany" prefWidth="214.0" text="Company" />
+            <TableColumn fx:id="colItemID" prefWidth="119.0" text="Item_ID" />
+        </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#202932" height="250.0" layoutX="201.0" layoutY="487.0" opacity="0.51" stroke="BLACK" strokeType="INSIDE" width="423.0" />
+      <JFXTextField fx:id="txtSupID" focusColor="BLACK" layoutX="211.0" layoutY="503.0" prefHeight="25.0" prefWidth="192.0" promptText="Sup_ID" style="-fx-background-color: white;" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtName" focusColor="BLACK" layoutX="211.0" layoutY="550.0" prefHeight="25.0" prefWidth="192.0" promptText="Name" style="-fx-background-color: white;" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtEmail" focusColor="BLACK" layoutX="211.0" layoutY="601.0" prefHeight="25.0" prefWidth="192.0" promptText="Email" style="-fx-background-color: white;" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCompany" focusColor="BLACK" layoutX="211.0" layoutY="648.0" prefHeight="25.0" prefWidth="192.0" promptText="Company" style="-fx-background-color: white;" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtItemID" focusColor="BLACK" layoutX="211.0" layoutY="694.0" prefHeight="25.0" prefWidth="192.0" promptText="Item_ID" style="-fx-background-color: white;" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton layoutX="479.0" layoutY="515.0" onAction="#btnAddOnAction" prefHeight="44.0" prefWidth="113.0" style="-fx-background-color: #0c75d7; -fx-background-radius: 15px;" text="Add" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="2.0" specularConstant="0.0" specularExponent="0.0" surfaceScale="5.87">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </JFXButton>
+      <JFXButton layoutX="479.0" layoutY="572.0" onAction="#btnUpdateOnAction" prefHeight="44.0" prefWidth="113.0" style="-fx-background-color: #0dd656; -fx-background-radius: 15px;" text="Update" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="2.0" specularConstant="0.0" specularExponent="0.0" surfaceScale="5.87">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </JFXButton>
+      <JFXButton layoutX="479.0" layoutY="627.0" onAction="#btnDeleteOnAction" prefHeight="44.0" prefWidth="113.0" style="-fx-background-color: #d40f29; -fx-background-radius: 15px;" text="Delete" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="2.0" specularConstant="0.0" specularExponent="0.0" surfaceScale="5.87">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </JFXButton>
+      <JFXButton layoutX="479.0" layoutY="677.0" onAction="#btnSearchOnAction" prefHeight="44.0" prefWidth="113.0" style="-fx-background-color: #294980; -fx-background-radius: 15px;" text="Search" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="2.0" specularConstant="0.0" specularExponent="0.0" surfaceScale="5.87">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </JFXButton>
+   </children>
+</AnchorPane>
